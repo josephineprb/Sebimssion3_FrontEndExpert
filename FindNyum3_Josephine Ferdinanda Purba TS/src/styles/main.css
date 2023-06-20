@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;600&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body,html{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "Urbanist", sans-serif;
+  font-size: 20px;
+  background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  padding: 10px;
+  background-color:crimson;
+  color: white;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+.app-bar{
+  padding: 8px 16px;
+  background-color: crimson;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.app-bar > .app-bar__menu {
+  align-items: center;
+  display: flex;
+}
+
+.app-bar > .app-bar__menu > .headermenu{
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  padding: 10px;
+  cursor: pointer;
+  color: antiquewhite;
+}
+
+.app-bar > .app-bar__brand {
+  display: flex;
+  align-items: center;
+}
+
+.app-bar__brand > .brand_name {
+  font-weight: 600;
+  font-size: 40px;
+  color:beige;
+}
+
+.app-bar__brand > .brand_name2 {
+  font-weight: 800;
+  font-size: 40px;
+  color:darksalmon;
+}
+
+.app-bar > .app-bar__navigation {
+  position: absolute;
+  top: 50px;
+  left: -180px;
+  width: 150px;
+  transition: all 0.3s;
+  padding: 8px;
+  background-color:crimson;
+  overflow: hidden;
+}
+ 
+.app-bar > .app-bar__navigation.open {
+  left: 0;
+}
+
+.app-bar > .app-bar__navigation > ul > li > a {
+  display: inline-block;
+  text-decoration: none;
+  color:antiquewhite;
+  font-size: 20px;
+  padding: 10px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.app-bar__navigation > ul > li > a:hover {
+  color: brown;
+}
+
+.hero {
+  display: flex;
+  vertical-align: middle;
+  align-items: center;
+  background-color: #000000;
+  height: 100vh;
+  width: 100%;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.hero > img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+.hero__inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-size: 0.8rem;
+}
+
+.hero_title {
+  color:#FAD586;
+  font-weight: 800;
+  font-size: 40px;
+  align-items: center;
+}
+
+main {
+  padding: 32px;
+  flex: 1;
+}
+ 
+.content {
+  margin: 0 auto;
+  min-height: 100%;
+}
+
+#maincontent > h1 {
+  align-items: center;
+  text-align: center;
+}
+ 
+.content .content__heading {
+  font-weight: normal;
+}
+
+.restaurants {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 32px 0;
+}
+
+.restaurant-item {
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+ 
+.restaurant-item__header {
+  position: relative;
+}
+ 
+.restaurant-item > .restaurant-item__header > .restaurant-item__header__pic {
+  width: 100%;
+}
+ 
+.restaurant-item > .restaurant-item__header > .restaurant-item__header__rating__score {
+  position: absolute;
+  padding: 8px;
+  bottom: 20px;
+  left: 0;
+  display: inline-block;
+  background-color: black;
+  color: white;
+}
+ 
+.restaurant-item > .restaurant-item__header > .restaurant-item__header__rating > .restaurant-item__header__rating__score {
+  margin-left: 10px;
+}
+ 
+.restaurant-item > .restaurant-item__content {
+  padding: 16px;
+}
+ 
+.restaurant-item > .restaurant-item__content h3 {
+  margin: 0 0 10px 0;
+}
+ 
+.restaurant-item > .restaurant-item__content h3 a {
+  color: #db0000;
+  text-decoration: none;
+  font: 20px;
+  padding: 8px;
+}
+ 
+.restaurant-item > .restaurant-item__content p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; 
+  -webkit-box-orient: vertical;
+}
+
+.restaurant {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px 16px;
+}
+ 
+.restaurant > .restaurant__pic {
+  width: 100%;
+  max-width: 400px;
+}
+ 
+.restaurant .restaurant__info h4 {
+  margin: 8px 0;
+}
+
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #db0000;
+  
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+  
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+footer {
+  padding: 20px;
+  background-color: crimson;
+  color: antiquewhite;
+  text-align: center;
+  margin-top: 30px ;
+}
+
